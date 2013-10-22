@@ -137,8 +137,8 @@ public class KKAPIRequest extends UserTask<Object, Void, Void> {
 			postParams.add((new BasicNameValuePair(key, value)));
 			byte[] byteDataForGZIP = GZIPUtils.gzipCompress(EntityUtils.toByteArray(new UrlEncodedFormEntity(postParams, HTTP.UTF_8)));
 			inputStreamEntity = new InputStreamEntity(new ByteArrayInputStream(byteDataForGZIP), byteDataForGZIP.length);
-			inputStreamEntity.setContentType("application/x-www-form-urlencoded");
 			inputStreamEntity.setContentEncoding("gzip");
+			inputStreamEntity.setContentType("application/x-www-form-urlencoded");
 		} catch (Exception e) {}
 	}
 

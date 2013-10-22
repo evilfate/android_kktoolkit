@@ -25,9 +25,7 @@ public class GZIPUtils {
 				if (gzip != null) {
 					gzip.close();
 				}
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			} catch (IOException e) {}
 		}
 		return out.toByteArray();
 	}
@@ -53,9 +51,7 @@ public class GZIPUtils {
 				if (gunzip != null) {
 					gunzip.close();
 				}
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			} catch (IOException e) {}
 		}
 		return out.toByteArray();
 	}
